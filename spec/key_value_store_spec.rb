@@ -28,6 +28,16 @@ describe "KeyValueStore" do
 
     expect(key_value_store.get(1)).to eq expected
   end
+
+  it "allows a user to get a list of all the keys in the store" do
+    key_value_store = KeyValueStore.new
+    key_value_store.add(1, "one")
+    key_value_store.add(2, "two")
+
+    expected = [1, 2]
+
+    expect(key_value_store.list).to eq expected
+  end
 end
 
 

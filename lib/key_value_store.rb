@@ -11,7 +11,12 @@ class KeyValueStore
   def get(key)
     @store_hash[key]
   end
+
   def delete(key)
     @store_hash.delete(key)
+  end
+
+  def list
+    @store_hash.keys
   end
 end
