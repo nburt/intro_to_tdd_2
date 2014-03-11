@@ -7,4 +7,8 @@ class KeyValueStore
     @store_hash[key] = value
     @store_hash
   end
+
+  def get(key)
+    @store_hash[key]
+  end
 end
