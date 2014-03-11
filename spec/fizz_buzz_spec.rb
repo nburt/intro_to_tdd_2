@@ -2,10 +2,10 @@ require 'rspec/core'
 require 'fizz_buzz'
 
 describe FizzBuzz do
-  it "Replaces numbers in array with 'Fizz' if divisible by 3" do
+  it "Replaces numbers in array with 'Fizz' if divisible by 3, with 'Buzz' if divisible by 5" do
     fizz_buzz = FizzBuzz.new(15)
 
-    expected = [1, 2, "Fizz", 4, 5, "Fizz", 7, 8, "Fizz", 10, 11, "Fizz", 13, 14, "Fizz"]
+    expected = [1, 2, "Fizz", 4, "Buzz", "Fizz", 7, 8, "Fizz", "Buzz", 11, "Fizz", 13, 14, "Fizz"]
 
     expect(fizz_buzz.arrayify).to eq expected
   end

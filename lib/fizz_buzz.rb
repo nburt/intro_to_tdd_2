@@ -12,6 +12,8 @@ class FizzBuzz
       case
         when number % 3 == 0
           array[i] = "Fizz"
+        when number % 5 == 0
+          array[i] = "Buzz"
       end
       i += 1
     end
