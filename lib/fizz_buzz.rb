@@ -10,6 +10,8 @@ class FizzBuzz
 
     array.each do |number|
       case
+        when number % 3 && number % 5 == 0
+          array[i] = "FizzBuzz"
         when number % 3 == 0
           array[i] = "Fizz"
         when number % 5 == 0
