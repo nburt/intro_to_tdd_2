@@ -18,6 +18,16 @@ describe "KeyValueStore" do
 
     expect(key_value_store.get(1)).to eq expected
   end
+
+  it "allows a user to delete a key, key will then return nil when you call get method" do
+    key_value_store = KeyValueStore.new
+    key_value_store.add(1, "one")
+    key_value_store.delete(1)
+
+    expected = nil
+
+    expect(key_value_store.get(1)).to eq expected
+  end
 end
 
 
