@@ -2,10 +2,11 @@ require 'rspec/core'
 require 'odd_even'
 
 describe OddEven do
-  it "returns numbers from 1 to the numer it was initialized with" do
+  it "returns numbers from 1 to the numer it was initialized with, replaces even numbers with 'Even'" do
     odd_even = OddEven.new(10)
 
-    expected = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    expected = [1, "Even", 3, "Even", 5, "Even", 7, "Even", 9, "Even"]
+
     expect(odd_even.run).to eq expected
   end
 end
