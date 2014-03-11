@@ -19,4 +19,8 @@ class KeyValueStore
   def list
     @store_hash.keys
   end
+
+  def clear
+    @store_hash.clear
+  end
 end

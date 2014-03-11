@@ -38,6 +38,17 @@ describe "KeyValueStore" do
 
     expect(key_value_store.list).to eq expected
   end
+
+  it "allows the user to clear the store, deleting all the store's keys and values" do
+    key_value_store = KeyValueStore.new
+    key_value_store.add(1, "one")
+    key_value_store.add(2, "two")
+    key_value_store.clear
+
+    expected = nil
+
+    expect(key_value_store.get(1)).to eq expected
+  end
 end
 
 
