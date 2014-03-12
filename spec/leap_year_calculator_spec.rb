@@ -5,9 +5,9 @@ describe LeapYearCalculator do
   it "is a leap year if it is divisible by 4" do
     leap_year_calculator = LeapYearCalculator.new
 
-    expected = true
+    expected = false
 
-    expect(leap_year_calculator.yes?(2012)).to eq expected
+    expect(leap_year_calculator.yes?(2005)).to eq expected
   end
 end
 
