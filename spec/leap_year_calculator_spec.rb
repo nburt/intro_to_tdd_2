@@ -9,6 +9,14 @@ describe LeapYearCalculator do
 
     expect(leap_year_calculator.yes?(2012)).to eq expected
   end
+
+  it "is a leap year only if it is divisible by 400 and 100, not just 100" do
+    leap_year_calculator = LeapYearCalculator.new
+
+    expected = false
+
+    expect(leap_year_calculator.yes?(1900)).to eq expected
+  end
 end
 
 
